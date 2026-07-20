@@ -1,0 +1,267 @@
+/* SECTION */
+.project-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #ffffff, #f8f9fa);
+  color: #000000;
+  text-align: center;
+  position: relative;
+  pointer-events: auto;
+  border-top: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.project-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', 'Poppins', serif;
+  animation: slideDownFade 0.7s ease-out;
+  color: #000000;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTAINER */
+.project-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  pointer-events: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* CARD */
+.project-card {
+  width: 100%;
+  max-width: 850px;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* entry animation - pop in */
+  opacity: 0;
+  transform: scale(0.7) translateY(30px);
+  animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+
+  pointer-events: auto;
+  border-top: 4px solid #dc2626;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* glowing border effect - FIXED to not block clicks */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(120deg, transparent, #dc2626, transparent);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* hover effect */
+.project-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(220, 38, 38, 0.25);
+  background: rgba(220, 38, 38, 0.05);
+}
+
+/* TITLE */
+.project-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #dc2626;
+  position: relative;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* TECH BADGE */
+.project-tech {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  margin-bottom: 15px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.project-tech:hover {
+  background: rgba(220, 38, 38, 0.15);
+  transform: scale(1.05);
+}
+
+/* DESCRIPTION */
+.project-desc {
+  margin: 15px 0;
+  line-height: 1.7;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* FEATURES */
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-features li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+/* custom icon */
+.project-features li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-size: 0.8rem;
+  pointer-events: none; /* Ensure icon doesn't block clicks */
+}
+
+/* hover effect */
+.project-features li:hover {
+  transform: translateX(6px);
+  color: #198754;
+}
+
+/* BUTTON CONTAINER */
+.project-links {
+  margin-top: 25px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto; /* Ensure container allows clicks */
+}
+
+/* BUTTON - MAIN FIXES */
+.project-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0056b3, #198754);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  pointer-events: auto; /* Explicitly allow clicks on button */
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* button hover */
+.project-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 86, 179, 0.3);
+  background: linear-gradient(135deg, #198754, #0056b3);
+  color: #fff;
+}
+
+/* button active state */
+.project-btn:active {
+  transform: scale(0.98);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-container {
+    padding: 0 12px;
+  }
+
+  .project-features {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+  
+  .project-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Optional: Add a focus state for accessibility */
+.project-btn:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* Ensure smooth scrolling and no unwanted interactions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}

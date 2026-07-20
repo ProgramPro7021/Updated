@@ -1,0 +1,25 @@
+.app-layout {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--app-bg, #ffffff);
+  color: var(--app-text, #000000);
+}
+
+.app-layout.theme-light {
+  --app-bg: #ffffff;
+  --app-text: #000000;
+}
+
+.app-layout.theme-dark {
+  --app-bg: #ffffff;
+  --app-text: #000000;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    background-attachment: scroll;
+  }
+}

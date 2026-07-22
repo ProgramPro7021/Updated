@@ -1,0 +1,288 @@
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-section {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  color: #000;
+  text-align: center;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.work-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', 'Poppins', serif;
+  color: #000;
+  animation: slideDownFade 0.7s ease-out;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* =========================
+   JOB CARD
+========================= */
+
+.job {
+  width: 90%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+
+  border-top: 4px solid #0ea5e9;
+  border-left: 4px solid transparent;
+
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.05);
+
+  opacity: 0;
+  transform: scale(0.92) translateY(25px);
+
+  animation: popIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(.92) translateY(25px);
+  }
+
+  60% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Animation Delay */
+
+.job:nth-child(1) {
+  animation-delay: .2s;
+}
+
+.job:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.job:nth-child(3) {
+  animation-delay: .6s;
+}
+
+/* Hover */
+
+.job:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.job h3 {
+  font-size: 1.45rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.job-duration {
+  font-size: .92rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.job-company {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.job ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.split-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin-top: 18px;
+}
+
+.split-list li {
+  flex: 1 1 45%;
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.75;
+  color: #374151;
+  font-size: .95rem;
+  transition: transform .3s ease, color .3s ease;
+}
+
+.split-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  font-size: .5rem;
+}
+
+.split-list li:hover {
+  transform: translateX(5px);
+}
+
+/* =========================
+   TECH JOB
+========================= */
+
+.job.job-tech {
+  border-top-color: #0ea5e9;
+  border-left-color: #0ea5e9;
+}
+
+.job.job-tech h3,
+.job.job-tech .job-company {
+  color: #0ea5e9;
+}
+
+.job.job-tech:hover {
+  background: rgba(14, 165, 233, 0.05);
+  box-shadow:
+    0 18px 40px rgba(14, 165, 233, .18);
+}
+
+.job.job-tech .split-list li::before {
+  color: #0ea5e9;
+}
+
+.job.job-tech .split-list li:hover {
+  color: #0ea5e9;
+}
+
+/* =========================
+   HEALTHCARE JOB
+========================= */
+
+.job.job-health {
+  border-top-color: #e91e63;
+  border-left-color: #e91e63;
+}
+
+.job.job-health h3,
+.job.job-health .job-company {
+  color: #e91e63;
+}
+
+.job.job-health:hover {
+  background: rgba(233, 30, 99, .05);
+  box-shadow:
+    0 18px 40px rgba(233, 30, 99, .18);
+}
+
+.job.job-health .split-list li::before {
+  color: #e91e63;
+}
+
+.job.job-health .split-list li:hover {
+  color: #e91e63;
+}
+
+/* =========================
+   BORDER GLOW
+========================= */
+
+.job::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, .5),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.job:hover::after {
+  opacity: .45;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .work-section {
+    padding: 50px 15px;
+  }
+
+  .work-section h2 {
+    font-size: 2rem;
+  }
+
+  .job {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .job h3 {
+    font-size: 1.25rem;
+  }
+
+  .split-list li {
+    flex: 1 1 100%;
+  }
+
+}

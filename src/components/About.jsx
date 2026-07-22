@@ -6,24 +6,23 @@ const About = () => {
     <section id="about" className="about-section">
       <h2>About Me</h2>
       <div className="about-container">
-        
-     
+
+
 
         <p className="about-text">
-          I am a dedicated Web Developer with experience in Sitecore CMS and Adobe Experience Manager (AEM), 
-          currently working at Accenture. I specialize in managing web content, building reusable templates, 
-          and ensuring smooth publishing workflows for enterprise-level applications.
+          I am a Web Content Publisher & Frontend Developer with nearly 7 years of experience in enterprise web content management and digital publishing. I began my career at Accenture and currently work at Infosys, where I manage and maintain large-scale websites for global clients, ensuring accurate, high-quality, and timely content delivery.
         </p>
 
         <p className="about-text">
-          Over the years, I have worked on multiple projects that improved website performance, enhanced SEO 
-          structure, and delivered seamless user experiences. My role involves close collaboration with teams 
-          to maintain high-quality standards and scalable digital solutions.
+          Throughout my career, I have worked extensively with leading Content Management Systems, including Adobe Experience Manager (AEM), Sitecore, and WordPress. I have experience creating and managing reusable components, publishing website content, maintaining page structures, troubleshooting content issues, and collaborating with cross-functional teams to deliver seamless digital experiences. I have also worked with project management and ticketing tools such as Workfront and Wrike to manage content requests, approvals, and publishing workflows efficiently.
         </p>
 
         <p className="about-text">
-          I am continuously learning and exploring new technologies like React and modern web development tools, 
-          with a strong interest in building impactful and user-friendly applications.
+          Alongside my professional experience, I have a strong passion for frontend development. I enjoy building responsive, user-friendly web applications using HTML, CSS, JavaScript, Bootstrap, React, and modern web technologies. I continuously explore best practices in UI development, performance optimization, and accessibility to create better user experiences.
+        </p>
+
+        <p className="about-text">
+          Currently, I am expanding my skill set by learning backend development with Node.js, Express.js, MongoDB, and REST APIs. My long-term goal is to become a Full Stack Developer capable of designing, developing, and deploying scalable, end-to-end web applications while continuously learning new technologies and industry best practices.
         </p>
 
       </div>

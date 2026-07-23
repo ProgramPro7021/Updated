@@ -261,7 +261,7 @@
   outline-offset: 2px;
 }
 
-/* Ensure smooth scrolling and no unwanted interactions */
-* {
+/* Scoped tap highlight reset for project section only */
+.project-section {
   -webkit-tap-highlight-color: transparent;
 }
